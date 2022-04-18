@@ -11,7 +11,7 @@ tags = ('Hemato', 'Pediatr', 'cardio', 'derma', 'endocrino',
         'oftalmo', 'onco', 'procto', 'psih', 'pulmo', 
         'reab', 'rengenolog', 'stomato', 'travm', 'uro')
 
-analyzer = TextAnalyzer("orders2", tags=tags)
+analyzer = TextAnalyzer(input("Name of model: "), tags=tags)
 
 
 @app.route('/analyze', methods=["GET"])
