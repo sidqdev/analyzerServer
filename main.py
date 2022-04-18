@@ -11,7 +11,7 @@ tags = ('Hemato', 'Pediatr', 'cardio', 'derma', 'endocrino',
         'oftalmo', 'onco', 'procto', 'psih', 'pulmo', 
         'reab', 'rengenolog', 'stomato', 'travm', 'uro')
 
-analyzer = TextAnalyzer("orders", tags=tags)
+analyzer = TextAnalyzer("orders2", tags=tags)
 
 
 @app.route('/analyze', methods=["GET"])
@@ -42,7 +42,7 @@ def go_fit():
     with open('learnData.json', 'r') as f:
         data = load(f)
         analyzer.set_batch_size(len(data) - 1)
-        analyzer.set_epochs_count(10)
+        analyzer.set_epochs_count(3)
         analyzer.set_save_after_fit(True)
         i = 0
         for frame in data:
