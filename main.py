@@ -51,3 +51,4 @@ def go_fit():
             analyzer.fit(frame.get('text'), frame.get('tags'))
 
 app.run('0.0.0.0', 8031)
+
